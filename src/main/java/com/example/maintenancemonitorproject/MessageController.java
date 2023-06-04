@@ -22,4 +22,9 @@ public class MessageController {
     public static void setMessage(String newMessage){
         message.specificMessage = newMessage;
     }
+
+    @PostMapping("/monitor/message/reset")
+    public static void resetMessage(){
+        message.specificMessage = "";
+    }
 }
