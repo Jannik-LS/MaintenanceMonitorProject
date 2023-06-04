@@ -9,7 +9,7 @@ public class MessageController {
     private static Message message = new Message();
 
 
-    @PostMapping("/monitor/setMessage")
+    @PostMapping("/monitor/message/set")
     public static void setMessage(String newMessage){
         message.specificMessage = newMessage;
     }
