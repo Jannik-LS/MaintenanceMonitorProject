@@ -8,6 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class MessageController {
     private static Message message = new Message();
 
+    @RequestMapping("/monitor/message")
+    public static String sendMessage(){
+
+        if (message.specificMessage.isEmpty()){
+            return message.defaultMessage;
+        } else {
+            return message.specificMessage;
+        }
+    }
 
     @PostMapping("/monitor/message/set")
     public static void setMessage(String newMessage){
